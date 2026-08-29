@@ -1,0 +1,65 @@
+/**
+ * DevOps Cookbook — design tokens
+ * Aesthetic: an ops terminal, not a marketing site. Deep blue-slate (not pure
+ * black) paired with a warm amber accent — a nod to old amber CRT ops
+ * consoles, and warm enough to still feel like a "cookbook."
+ */
+
+:root {
+  --cb-mono-font: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  --cb-bg: #f7f6f3;
+  --cb-panel: #ffffff;
+  --cb-border: #e3e0d8;
+  --cb-accent: #b5670a;
+  --cb-terminal-bg: #1c1f26;
+  --cb-terminal-bar: #15171c;
+  --cb-terminal-fg: #e8e6df;
+
+  --ifm-color-primary: #b5670a;
+  --ifm-color-primary-dark: #a35d09;
+  --ifm-color-primary-darker: #9a5809;
+  --ifm-color-primary-darkest: #7f4907;
+  --ifm-color-primary-light: #c7710b;
+  --ifm-color-primary-lighter: #d0770c;
+  --ifm-color-primary-lightest: #e6870f;
+
+  --ifm-code-font-size: 92%;
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --docusaurus-highlighted-code-line-bg: rgba(181, 103, 10, 0.1);
+}
+
+[data-theme='dark'] {
+  --cb-bg: #12141a;
+  --cb-panel: #181b22;
+  --cb-border: #2a2e38;
+  --cb-accent: #e2a63b;
+  --cb-terminal-bg: #0d0f14;
+  --cb-terminal-bar: #090a0d;
+  --cb-terminal-fg: #eceadf;
+
+  --ifm-color-primary: #e2a63b;
+  --ifm-color-primary-dark: #dc9a24;
+  --ifm-color-primary-darker: #d09220;
+  --ifm-color-primary-darkest: #ab781a;
+  --ifm-color-primary-light: #e6b256;
+  --ifm-color-primary-lighter: #e8b863;
+  --ifm-color-primary-lightest: #edc789;
+
+  --ifm-background-color: #12141a;
+  --docusaurus-highlighted-code-line-bg: rgba(226, 166, 59, 0.13);
+}
+
+/* Headings lean on the mono face to keep the "console" feel in body copy too */
+h1, h2, h3 {
+  font-family: var(--cb-mono-font);
+  letter-spacing: -0.01em;
+}
+
+.navbar {
+  font-family: var(--cb-mono-font);
+}
+
+.navbar__title {
+  font-weight: 600;
+}
