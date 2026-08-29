@@ -63,3 +63,89 @@ h1, h2, h3 {
 .navbar__title {
   font-weight: 600;
 }
+
+/* ─────────────────────────────────────────────────────────────────────────
+ * Doc content — make each chapter's sections (##) visually distinct instead
+ * of just "bigger bold text". Sections get a top rule + more breathing room;
+ * subsections (###) get a left accent bar so the hierarchy reads at a glance.
+ * ───────────────────────────────────────────────────────────────────────── */
+
+.markdown > h2 {
+  margin-top: 3.25rem;
+  padding-top: 1.5rem;
+  border-top: 3px solid var(--cb-accent);
+}
+
+.markdown > h2:first-of-type {
+  margin-top: 1.75rem;
+}
+
+.markdown > h3 {
+  margin-top: 2.25rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--cb-border);
+}
+
+/* The "> Status: ..." line right under the H1 reads as a small badge/pill,
+ * not a big quote block. */
+.markdown > blockquote:first-of-type {
+  display: inline-block;
+  border: 1px solid var(--cb-border);
+  border-left: 1px solid var(--cb-border);
+  border-radius: 999px;
+  background: var(--cb-panel);
+  padding: 0.3rem 0.95rem;
+  margin: 0 0 2rem;
+  font-family: var(--cb-mono-font);
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.markdown > blockquote:first-of-type p {
+  margin: 0;
+}
+
+/* "Common Tools" tables — clearer header, subtle zebra striping */
+.markdown table {
+  width: 100%;
+  border: 1px solid var(--cb-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: table;
+}
+
+.markdown table thead tr {
+  background: var(--cb-accent);
+}
+
+.markdown table thead th {
+  color: #1a1400;
+  font-family: var(--cb-mono-font);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.markdown table tbody tr:nth-child(even) {
+  background: var(--ifm-table-stripe-background, rgba(128, 128, 128, 0.06));
+}
+
+/* Mermaid diagrams get a framed "panel" so they read as a distinct block,
+ * matching the Overview/How It Works sections around them. */
+.markdown .docusaurus-mermaid-container {
+  border: 1px solid var(--cb-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: var(--cb-panel);
+  margin: 1.5rem 0;
+}
+
+/* Sidebar category labels (Part 1 / Part 2 / Part 3) a bit bolder so the
+ * top-level structure is easy to scan. */
+.theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible > .menu__link {
+  font-weight: 700;
+  font-family: var(--cb-mono-font);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
